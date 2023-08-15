@@ -8,7 +8,12 @@
 </head>
 <body>
     <!-- We only have one root in body in react  -->
-    <div id="root"></div>
+    <div id="root">Not Rendered</div>
+    <!-- <div id="container">
+        <h1>Heading1</h1>
+        <h2>Heading2</h2>
+    </div> -->
+
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script>
@@ -16,8 +21,20 @@
         {
             id : "title"
         }, "Namaste Everyone from React!");
+        const heading1 = React.createElement("h1", 
+        {
+            id : "title"
+        }, "Heading1");
+        const heading2 = React.createElement("h2", 
+        {
+            id : "title"
+        }, "Heading2");
+        const conatiner = React.createElement("div", 
+        {
+            id : "conatiner"
+        }, [heading1,heading2]);
         const root = ReactDOM.createRoot(document.getElementById("root"));
-        root.render(heading);
+        root.render(conatiner);
     </script>
 </body>
 </html>
