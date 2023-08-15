@@ -19,12 +19,12 @@ const heading2 = React.createElement(
   },
   "Heading2"
 );
-const conatiner = React.createElement(
+const container = React.createElement(
   "div",
   {
-    id: "conatiner",
+    id: "container",
   },
   [heading1, heading2]
 );
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(conatiner);
+root.render(container);
