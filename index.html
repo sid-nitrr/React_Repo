@@ -9,16 +9,15 @@
 <body>
     <!-- We only have one root in body in react  -->
     <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+        const heading = React.createElement("h1", 
+        {
+            id : "title"
+        }, "Namaste Everyone from React!");
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(heading);
+    </script>
 </body>
-<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-<script>
-    const heading = React.createElement("h1", 
-    {
-        id : "title"
-    }, "Namaste Everyone from React!");
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(heading);
-    console.log(heading)
-</script>
 </html>
